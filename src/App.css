@@ -1,0 +1,75 @@
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+ overflow: hidden;
+}
+ul[class]{
+  list-style: none;
+}
+
+
+.loading {
+  margin: 0 auto;
+  font-size: 35px;
+}
+
+.loading-dots,
+.loading-dots:before,
+.loading-dots:after {
+  color: rgba(255, 255, 255, .2);
+  animation-name: loading-dots-animation;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.loading-dots:before,
+.loading-dots:after {
+  content: attr(data-dot);
+  margin: 0 .2em;
+}
+
+.loading-dots {
+  font-size: 2em;
+  animation-delay: 0.66s;
+}
+
+.loading-dots:before {
+  animation-delay: 0.33s;
+}
+
+.loading-dots:after {
+  animation-delay: 0;
+}
+
+@keyframes loading-dots-animation{
+  0% {
+    color: rgba(255, 255, 255, .2);
+  }
+  20% {
+    color: rgba(255, 255, 255, .2);
+  }
+  30% {
+    color: rgba(255, 255, 255, .2);
+  }
+  65% {
+    color: rgba(255, 255, 255, .8);
+  }
+  100% {
+    color: rgba(255, 255, 255, .2);
+  }
+}
+
+.loading-text {
+  font-weight: bold;
+  margin: 0.3em 0;
+  font-size: 1em;
+}
+
+.note{
+  margin: 1em 0;
+  opacity: 0.6;
+  font-size: 0.8em;
+}
